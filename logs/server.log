@@ -6587,3 +6587,13 @@
 [22:11:05][INFO]: [200] - [T2CAK8QtEGev4nFS7G4nOED0WqD2] Seat registered successfully
 [22:11:06][INFO]:  [37m[1m○[22m[39m Compiling /booking/payment/[flight_id] ...
 [22:11:29][INFO]:  [32m[1m✓[22m[39m Compiled /booking/payment/[flight_id] in 23.6s (2074 modules)
+[22:11:31][INFO]: Client disconnected
+[22:11:34][INFO]: Client connected
+[22:11:47][INFO]: Client connected
+[22:11:48][INFO]: User joined flight: flight_id_12345
+[22:11:49][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[22:11:51][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 4s (2064 modules)
+[22:15:31][INFO]:  [32m[1m✓[22m[39m Compiled in 11.8s (1894 modules)
+[22:15:39][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[22:15:39][INFO]: Client disconnected
+[22:15:41][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 3s (1884 modules)
