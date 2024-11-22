@@ -4,6 +4,16 @@ export interface User {
   email: string;
 }
 
+export interface FlightDetails {
+  flightData: FlightInfo;
+  passengerDetails : {
+    passengerDetails: PassengerDetail;
+    purchasedBy: PurchaseInfo;
+    status: string;
+  };
+  seatid: string;
+}
+
 export interface FlightInfo {
   flightId?: string;
   arrival: LocationInfo;
