@@ -13,9 +13,7 @@ export default function Home() {
   const [eventList, setEventList] = useState<{ time: string; type: string; message: string }[]>([]);
 
   useEffect(() => {
-    const socket = io("https://sell-tickets.vercel.app/api/socket", {
-      transports: ["websocket"],
-    });
+    const socket = io("/api/socket");
 
     socket.on("connect", () => {
       console.log("Connected to server for logs.");
