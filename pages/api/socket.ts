@@ -12,7 +12,7 @@ const initializeSocketIO = (server) => {
     io = new Server(server, {
       path: "/api/socket",
       cors: {
-        origin: ["https://sell-tickets.vercel.app", "http://localhost:3000"],
+        origin: "https://sell-tickets.vercel.app",
         methods: ["GET", "POST"],
       },
     });
