@@ -6597,3 +6597,11 @@
 [22:15:39][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
 [22:15:39][INFO]: Client disconnected
 [22:15:41][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 3s (1884 modules)
+[22:15:53][INFO]: Socket Seat 1_02_C on flight flight_id_12345 has been reset to free after timeout.
+[22:15:53][INFO]: Seat 1_02_C on flight flight_id_12345 has been reset to free due to timeout.
+[22:15:53][INFO]: Canceled reset for seat 1_02_C on flight flight_id_12345.
+[22:16:17][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/info/[flightid] ...
+[22:16:21][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/info/[flightid] in 5.3s (883 modules)
+[22:43:58][INFO]:  [32m[1m✓[22m[39m Compiled in 7.2s (1030 modules)
+[22:44:11][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[22:44:18][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 7.8s (1884 modules)
