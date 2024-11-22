@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     const socket = io({
-      path: "https://sell-tickets.vercel.app/api/socket",
+      path: "/api/socket",
     });
 
     socket.on("connect", () => {
