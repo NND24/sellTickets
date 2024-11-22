@@ -6583,3 +6583,7 @@
 [16:51:04][INFO]:  [32m[1m✓[22m[39m Compiled in 16.1s (2030 modules)
 [16:51:04][INFO]:  [32m[1m✓[22m[39m Compiled in 16.1s (2030 modules)
 [16:51:04][INFO]:  [32m[1m✓[22m[39m Compiled in 16.1s (2030 modules)
+[22:11:05][INFO]: [Task scheduling] _ Schedule set for 300s
+[22:11:05][INFO]: [200] - [T2CAK8QtEGev4nFS7G4nOED0WqD2] Seat registered successfully
+[22:11:06][INFO]:  [37m[1m○[22m[39m Compiling /booking/payment/[flight_id] ...
+[22:11:29][INFO]:  [32m[1m✓[22m[39m Compiled /booking/payment/[flight_id] in 23.6s (2074 modules)
