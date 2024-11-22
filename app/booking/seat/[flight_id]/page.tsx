@@ -16,7 +16,7 @@ import { FlightInfo, RowType, Seat, User } from "../../../../util/interface";
 
 type Props = {};
 
-const socket = io("/api/socket", {
+const socket = io("https://sell-tickets.vercel.app/api/socket", {
   transports: ["websocket"],
 });
 
