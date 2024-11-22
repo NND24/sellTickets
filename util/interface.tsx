@@ -6,7 +6,7 @@ export interface User {
 
 export interface FlightDetails {
   flightData: FlightInfo;
-  passengerDetails : {
+  passengerDetails: {
     passengerDetails: PassengerDetail;
     purchasedBy: PurchaseInfo;
     status: string;
@@ -55,8 +55,6 @@ export interface PassengerDetail {
   status: "free" | "register" | "purchase" | "locked";
 }
 
-export type SeatEntry = [string, Seat];
-
 interface RegistrationInfo {
   timestamp: string;
   userId: string;
@@ -79,3 +77,8 @@ interface PaymentInfo {
   amount: number;
   method: string;
 }
+
+type SeatGroup = [seatName: string, seatInfo: Seat][];
+
+// Định nghĩa kiểu cho row1
+export type RowType = SeatGroup[];
