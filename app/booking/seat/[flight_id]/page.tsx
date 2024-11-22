@@ -16,8 +16,8 @@ import { FlightInfo, RowType, Seat, User } from "../../../../util/interface";
 
 type Props = {};
 
-const socket = io({
-  path: "/api/socket",
+const socket = io("/api/socket", {
+  transports: ["websocket"],
 });
 
 const page = () => {

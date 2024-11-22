@@ -13,8 +13,8 @@ export default function Home() {
   const [eventList, setEventList] = useState<{ time: string; type: string; message: string }[]>([]);
 
   useEffect(() => {
-    const socket = io({
-      path: "/api/socket",
+    const socket = io("/api/socket", {
+      transports: ["websocket"],
     });
 
     socket.on("connect", () => {
