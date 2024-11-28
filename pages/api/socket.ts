@@ -160,6 +160,35 @@ export default function SocketHandler(req, res) {
           }
         });
 
+        socket.on("unlockSeat2", ({ flightId, seatId, passengerDetails }) => {
+          const flight = flights[flightId];
+          if (flight) {
+            const seat = flight.seats[seatId];
+            if (seat && seat.status === "purchase") {
+              seat.status = "free";
+              seat.lockedBy = null;
+              seat.registeredBy = null;
+              seat.passengerDetails = {
+                ...passengerDetails,
+                seatId: null,
+                status: "free",
+              };
+
+              io.to(flightId).emit("seatStatusUpdated", {
+                seatId,
+                status: "free",
+                lockedBy: null,
+                registeredBy: null,
+                passengerDetails: {
+                  ...passengerDetails,
+                  seatId: null,
+                  status: "free",
+                },
+              });
+            }
+          }
+        });
+
         // Listen for seat reservation events
         socket.on("seatReserved", ({ flightId, seatId, userId, passengerDetails, registerTime }) => {
           const flight = flights[flightId];

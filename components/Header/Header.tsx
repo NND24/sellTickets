@@ -21,8 +21,8 @@ const Header = (props: Props) => {
   const { user, setUser } = useUser();
 
   const handleLogout = () => {
-    setUser(null)
-  }
+    setUser(null);
+  };
 
   return (
     <>
@@ -48,7 +48,7 @@ const Header = (props: Props) => {
                       src={avatar}
                       alt='avatar'
                       width={30}
-  height={30}
+                      height={30}
                       className='object-cover rounded-full cursor-pointer'
                       onClick={() => setOpenModal(!openModal)}
                     />
@@ -64,14 +64,17 @@ const Header = (props: Props) => {
                             boxShadow: "inset 0 0 70px rgba(0, 0, 0, .3), 0 0 20px rgba(0, 0, 0, .5)",
                           }}
                         >
-                          <Link
+                          {/* <Link
                             href={`/trang-ca-nhan`}
                             className='text-[16px] font-Poppins font-medium text-[#e0e0e0] drop-shadow-[1px_1px_1px_#000] hover:text-[#005a8c] hover:border-l-[3px] hover:border-[#005a8c] p-2 flex items-center gap-2 hover:bg-[#96969633]'
                           >
                             <RiUserLine />
                             <span> Tài khoản của tôi</span>
-                          </Link>
-                          <div className='text-[16px] font-Poppins font-medium text-[#e0e0e0] drop-shadow-[1px_1px_1px_#000] hover:text-[#005a8c] hover:border-l-[3px] hover:border-[#005a8c] p-2 flex items-center gap-2 hover:bg-[#96969633] cursor-pointer' onClick={() => handleLogout()}>
+                          </Link> */}
+                          <div
+                            className='text-[16px] font-Poppins font-medium text-[#e0e0e0] drop-shadow-[1px_1px_1px_#000] hover:text-[#005a8c] hover:border-l-[3px] hover:border-[#005a8c] p-2 flex items-center gap-2 hover:bg-[#96969633] cursor-pointer'
+                            onClick={() => handleLogout()}
+                          >
                             <FaArrowRightFromBracket />
                             <span>Đăng xuất</span>
                           </div>

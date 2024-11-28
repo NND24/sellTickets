@@ -15,7 +15,8 @@ import { HiOutlineTicket } from "react-icons/hi2";
 import { RiLuggageDepositFill } from "react-icons/ri";
 import { PiFlowerLotusBold } from "react-icons/pi";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { FlightDetails } from "../../util/interface";
+import { FlightDetails, FlightInfo } from "../../util/interface";
+import io from "socket.io-client";
 
 const popularFlights = [
   {
@@ -89,6 +90,10 @@ const popularFlights = [
 
 type Props = {};
 
+const socket = io({
+  path: "/api/socket",
+});
+
 const page = (props: Props) => {
   const [key, setKey] = useState<string>("link-1");
   const [flightNumber, setFlightNumber] = useState("");
@@ -99,10 +104,28 @@ const page = (props: Props) => {
   const [formattedDepartureTime, setFormattedDepartureTime] = useState("");
   const [formattedArrivalTime, setFormattedArrivalTime] = useState("");
   const [durationString, setDurationString] = useState("");
+  const [flightInfo, setFlightInfo] = useState<FlightInfo | null>(null);
 
   useEffect(() => {
     localStorage.removeItem("passengerDetails");
   }, []);
+
+  useEffect(() => {
+    if (ticketDetail) {
+      socket.emit("joinFlight", { flightId: ticketDetail?.flightData?.flightId });
+
+      // Lắng nghe sự kiện flightInfo từ server
+      socket.on("flightInfo", ({ flightInfo }) => {
+        setFlightInfo(flightInfo);
+      });
+    }
+
+    // Dọn dẹp sự kiện khi component bị unmount
+    return () => {
+      socket.off("flightInfo"); // Dọn dẹp sự kiện flightInfo
+      socket.off("seatStatusUpdated"); // Nếu cần dọn dẹp thêm các sự kiện khác
+    };
+  }, [ticketDetail]);
 
   const handleSearch = async () => {
     if (flightNumber && ticketCode && flightNumber.length > 0 && ticketCode.length > 0) {
@@ -178,15 +201,46 @@ const page = (props: Props) => {
     }
   }, [ticketDetail]);
 
+  useEffect(() => {
+    socket.on("seatStatusUpdated", ({ seatId, status, lockedBy, registeredBy, purchasedBy, passengerDetails }) => {
+      // Update flight information
+      setFlightInfo((prevInfo) => {
+        if (!prevInfo) return null;
+        const updatedSeats = {
+          ...prevInfo.seats,
+          [seatId]: { ...prevInfo.seats[seatId], status, lockedBy, registeredBy, purchasedBy, passengerDetails },
+        };
+        return { ...prevInfo, seats: updatedSeats };
+      });
+    });
+
+    return () => {
+      socket.off("seatStatusUpdated");
+    };
+  }, []);
+
   const handleCancelSeat = async (flight_id, seatId) => {
     const isConfirmed = window.confirm("Bạn có chắc chắn muốn hoàn vé này không?");
     if (isConfirmed) {
       try {
+        // Gửi yêu cầu reset ghế
         const res = await axios.post(`/api/flight/${flight_id}/seat/reset/${seatId}`);
+
+        // Phát hành sự kiện socket để thông báo
+        socket.emit("unlockSeat2", {
+          flightId: flight_id,
+          seatId: seatId,
+          passengerDetails: ticketDetail?.passengerDetails?.passengerDetails,
+        });
+
         toast.success("Hoàn vé thành công!");
         setTicketDetail(null);
       } catch (error) {
-        toast.error("Hoàn vé thất bại!");
+        if (error.response && error.response.data) {
+          toast.error(`Hoàn vé thất bại: ${error.response.data.message}`);
+        } else {
+          toast.error("Hoàn vé thất bại, xin vui lòng thử lại.");
+        }
       }
     } else {
       toast.success("Bạn đã hủy thao tác hoàn vé.");

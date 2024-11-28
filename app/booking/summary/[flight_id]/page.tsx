@@ -17,6 +17,7 @@ import axios from "axios";
 import { Spinner } from "react-bootstrap";
 import { useParams, useSearchParams } from "next/navigation";
 import { FlightInfo, User } from "../../../../util/interface";
+import toast from "react-hot-toast";
 
 type Props = {};
 
@@ -38,6 +39,7 @@ const page = () => {
   const [formattedDepartureTime, setFormattedDepartureTime] = useState("");
   const [formattedArrivalTime, setFormattedArrivalTime] = useState("");
   const [durationString, setDurationString] = useState("");
+  const [isAlreadyPurchased, setIsAlreadyPurchased] = useState(false);
 
   useEffect(() => {
     localStorage.removeItem("passengerDetails");
@@ -58,6 +60,23 @@ const page = () => {
   useEffect(() => {
     fetchFlightInfo();
   }, [flight_id]);
+
+  useEffect(() => {
+    if (user && flight_id) {
+      const handleSearch = async () => {
+        const res = await axios.post(`/api/flight/getFlightUser/`, {
+          flight_id,
+          userId: user.userId,
+        });
+
+        if (res.status === 200) {
+          setIsAlreadyPurchased(true);
+        }
+      };
+
+      handleSearch();
+    }
+  }, [user, flight_id]);
 
   useEffect(() => {
     if (flightInfo) {
@@ -112,6 +131,17 @@ const page = () => {
       setDurationString(duration);
     }
   }, [flightInfo]);
+
+  const isValid = () => {
+    return !isAlreadyPurchased;
+  };
+
+  const handleConfirmClick = (e) => {
+    if (!isValid()) {
+      e.preventDefault();
+      toast.error("Người dùng đã đăng ký vé cho chuyến bay này vui lòng chọn chuyến bay khác hoặc hủy vé!");
+    }
+  };
 
   return (
     <>
@@ -392,7 +422,10 @@ const page = () => {
               {user ? (
                 <Link
                   href={`/booking/traveler/${flight_id}?class=${flightClass}`}
-                  className='text-[18px] text-[#005f6e] hover:text-[#fff] hover:bg-[#005f6e] rounded-[10px] border-[3px] border-[#005f6e] py-[10px] px-[15px] w-fit font-medium cursor-pointer'
+                  onClick={handleConfirmClick}
+                  className={`text-[18px] text-[#005f6e] hover:text-[#fff] hover:bg-[#005f6e] rounded-[10px] border-[3px] border-[#005f6e] py-[10px] px-[15px] w-fit font-medium cursor-pointer ${
+                    !isValid() ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
                   TIẾP TỤC
                 </Link>
