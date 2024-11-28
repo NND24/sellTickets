@@ -139,7 +139,7 @@ const page = () => {
   const handleConfirmClick = (e) => {
     if (!isValid()) {
       e.preventDefault();
-      toast.error("Người dùng đã đăng ký vé cho chuyến bay này vui lòng chọn chuyến bay khác hoặc hủy vé!");
+      toast.error("Người dùng đã đăng ký vé cho chuyến bay này vui lòng chọn chuyến bay khác hoặc hoàn vé!");
     }
   };
 

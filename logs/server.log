@@ -7192,3 +7192,133 @@
 [18:16:56][INFO]: Client connected
 [18:20:15][INFO]: Client disconnected
 [18:20:15][INFO]: Client disconnected
+[18:20:32][INFO]: Client connected
+[18:20:32][INFO]: Client connected
+[19:25:22][INFO]: Client disconnected
+[19:25:22][INFO]: Client disconnected
+[19:26:16][INFO]: Client connected
+[19:26:16][INFO]: Client connected
+[19:28:11][INFO]: Client disconnected
+[19:28:12][INFO]: Client disconnected
+[19:28:12][INFO]: Client disconnected
+[19:28:12][INFO]: Client disconnected
+[19:28:13][INFO]: Client disconnected
+[19:28:12][INFO]: Client disconnected
+[19:28:13][INFO]: Client disconnected
+[19:28:13][INFO]: Client disconnected
+[19:28:56][INFO]:  [32m[1m✓[22m[39m Compiled in 115.7s (2040 modules)
+[19:28:56][INFO]:  [32m[1m✓[22m[39m Compiled in 115.7s (2040 modules)
+[19:29:01][INFO]: Client connected
+[19:29:01][INFO]: Client connected
+[19:29:01][INFO]: Client connected
+[19:29:02][INFO]: Client connected
+[19:29:01][INFO]: Client connected
+[19:29:02][INFO]: Client connected
+[19:29:30][INFO]: Client connected
+[19:29:30][INFO]: Client connected
+[19:29:40][INFO]: Client disconnected
+[19:29:41][INFO]: Client disconnected
+[19:29:46][INFO]: Client disconnected
+[19:29:46][INFO]: Client disconnected
+[19:29:46][INFO]: Client disconnected
+[19:29:47][INFO]: Client disconnected
+[19:29:49][INFO]: Client disconnected
+[19:29:49][INFO]: Client disconnected
+[19:37:34][INFO]: Client connected
+[19:37:34][INFO]: Client connected
+[19:37:39][INFO]: Client disconnected
+[19:37:39][INFO]: Client disconnected
+[19:37:43][INFO]: Client connected
+[19:37:43][INFO]: Client connected
+[19:37:50][INFO]: Client disconnected
+[19:37:50][INFO]: Client disconnected
+[19:38:23][INFO]: Client connected
+[19:38:23][INFO]: Client connected
+[19:38:23][INFO]: Client connected
+[19:38:23][INFO]: Client connected
+[19:40:05][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/get ...
+[19:40:05][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/get ...
+[19:40:08][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/get in 2.5s (1030 modules)
+[19:40:08][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/get in 2.5s (1030 modules)
+[19:40:08][INFO]: User joined flight: flight_id_12345
+[19:40:08][INFO]: User joined flight: flight_id_12345
+[19:40:17][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:40:17][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:40:37][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 20.6s (2061 modules)
+[19:40:37][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 20.6s (2061 modules)
+[19:42:32][INFO]:  [32m[1m✓[22m[39m Compiled in 34.3s (2040 modules)
+[19:42:32][INFO]:  [32m[1m✓[22m[39m Compiled in 34.3s (2040 modules)
+[19:42:41][INFO]: Client disconnected
+[19:42:41][INFO]: Client disconnected
+[19:42:44][INFO]: Client disconnected
+[19:42:44][INFO]: Client disconnected
+[19:43:13][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:43:13][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:43:20][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 8.2s (2030 modules)
+[19:43:20][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 8.2s (2030 modules)
+[19:43:21][INFO]: Client connected
+[19:43:21][INFO]: Client connected
+[19:43:26][INFO]: Client connected
+[19:43:26][INFO]: Client connected
+[19:43:42][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/get ...
+[19:43:42][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/get ...
+[19:43:44][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/get in 3.3s (1031 modules)
+[19:43:44][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/get in 3.3s (1031 modules)
+[19:43:45][INFO]: User joined flight: flight_id_12345
+[19:43:45][INFO]: User joined flight: flight_id_12345
+[19:45:56][INFO]:  [32m[1m✓[22m[39m Compiled in 10.8s (2040 modules)
+[19:45:57][INFO]:  [32m[1m✓[22m[39m Compiled in 10.8s (2040 modules)
+[19:46:11][INFO]: Client disconnected
+[19:46:11][INFO]: Client disconnected
+[19:46:23][INFO]: Client connected
+[19:46:23][INFO]: Client connected
+[19:46:26][INFO]: Client disconnected
+[19:46:26][INFO]: Client disconnected
+[19:46:34][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:46:34][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:46:35][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 2.8s (2030 modules)
+[19:46:35][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 2.8s (2030 modules)
+[19:47:55][INFO]: Client connected
+[19:47:55][INFO]: Client connected
+[19:48:05][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/get ...
+[19:48:05][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/get ...
+[19:48:07][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/get in 2.6s (1030 modules)
+[19:48:07][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/get in 2.6s (1030 modules)
+[19:48:21][INFO]: User joined flight: flight_id_12345
+[19:48:21][INFO]: User joined flight: flight_id_12345
+[19:48:48][INFO]:  [32m[1m✓[22m[39m Compiled in 8.1s (2058 modules)
+[19:48:48][INFO]:  [32m[1m✓[22m[39m Compiled in 8.1s (2058 modules)
+[19:49:03][INFO]: Client disconnected
+[19:49:03][INFO]: Client disconnected
+[19:49:14][INFO]: Client disconnected
+[19:49:14][INFO]: Client disconnected
+[19:49:23][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:49:23][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:49:25][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 2.9s (2048 modules)
+[19:49:25][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 2.9s (2048 modules)
+[19:50:37][INFO]: Client connected
+[19:50:37][INFO]: Client connected
+[19:50:41][INFO]: Client connected
+[19:50:41][INFO]: Client connected
+[19:50:46][INFO]:  [32m[1m✓[22m[39m Compiled in 35.2s (2042 modules)
+[19:50:46][INFO]:  [32m[1m✓[22m[39m Compiled in 35.2s (2042 modules)
+[19:50:48][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:50:48][INFO]:  [37m[1m○[22m[39m Compiling /_not-found ...
+[19:50:51][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 3.9s (2030 modules)
+[19:50:51][INFO]:  [32m[1m✓[22m[39m Compiled /_not-found in 3.9s (2030 modules)
+[19:51:29][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/get ...
+[19:51:29][INFO]:  [37m[1m○[22m[39m Compiling /api/flight/get ...
+[19:51:29][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/get in 1356ms (1031 modules)
+[19:51:29][INFO]:  [32m[1m✓[22m[39m Compiled /api/flight/get in 1356ms (1031 modules)
+[19:51:29][INFO]: User joined flight: flight_id_12345
+[19:51:29][INFO]: User joined flight: flight_id_12345
+[19:51:50][INFO]:  [32m[1m✓[22m[39m Compiled in 8.8s (2061 modules)
+[19:51:50][INFO]:  [32m[1m✓[22m[39m Compiled in 8.8s (2061 modules)
+[19:52:10][INFO]: Client disconnected
+[19:52:10][INFO]: Client disconnected
+[19:52:29][INFO]: Client connected
+[19:52:29][INFO]: Client connected
+[19:52:30][INFO]: Client disconnected
+[19:52:30][INFO]: Client disconnected
+[19:53:50][INFO]: Client connected
+[19:53:50][INFO]: Client connected

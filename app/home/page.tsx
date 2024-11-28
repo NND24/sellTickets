@@ -220,30 +220,47 @@ const page = (props: Props) => {
   }, []);
 
   const handleCancelSeat = async (flight_id, seatId) => {
-    const isConfirmed = window.confirm("Bạn có chắc chắn muốn hoàn vé này không?");
-    if (isConfirmed) {
-      try {
-        // Gửi yêu cầu reset ghế
-        const res = await axios.post(`/api/flight/${flight_id}/seat/reset/${seatId}`);
+    if (ticketDetail) {
+      // Lấy ngày hiện tại
+      let currentDate = new Date();
 
-        // Phát hành sự kiện socket để thông báo
-        socket.emit("unlockSeat2", {
-          flightId: flight_id,
-          seatId: seatId,
-          passengerDetails: ticketDetail?.passengerDetails?.passengerDetails,
-        });
+      // Chuyển đổi flightDate thành đối tượng Date
+      const flightDateObj = new Date(ticketDetail.flightData.departure.time);
 
-        toast.success("Hoàn vé thành công!");
-        setTicketDetail(null);
-      } catch (error) {
-        if (error.response && error.response.data) {
-          toast.error(`Hoàn vé thất bại: ${error.response.data.message}`);
-        } else {
-          toast.error("Hoàn vé thất bại, xin vui lòng thử lại.");
-        }
+      // Kiểm tra nếu ngày hiện tại cách ngày bay 1 ngày hoặc trùng ngày bay
+      const diffTime = flightDateObj.getTime() - currentDate.getTime(); // Khoảng cách thời gian (ms)
+      const diffDays = diffTime / (1000 * 60 * 60 * 24); // Đổi ra ngày
+
+      if (diffDays <= 1) {
+        toast.error("Không thể hủy vé vì chỉ còn 1 ngày hoặc ít hơn trước ngày bay.");
+        return;
       }
-    } else {
-      toast.success("Bạn đã hủy thao tác hoàn vé.");
+
+      const isConfirmed = window.confirm("Bạn có chắc chắn muốn hoàn vé này không?");
+      if (isConfirmed) {
+        try {
+          // Gửi yêu cầu reset ghế
+          const res = await axios.post(`/api/flight/${flight_id}/seat/reset/${seatId}`);
+
+          // Phát hành sự kiện socket để thông báo
+          socket.emit("unlockSeat2", {
+            flightId: flight_id,
+            seatId: seatId,
+            passengerDetails: ticketDetail?.passengerDetails?.passengerDetails,
+          });
+
+          toast.success("Hoàn vé thành công!");
+          setTicketDetail(null);
+        } catch (error) {
+          if (error.response && error.response.data) {
+            toast.error(`Hoàn vé thất bại: ${error.response.data.message}`);
+          } else {
+            toast.error("Hoàn vé thất bại, xin vui lòng thử lại.");
+          }
+        }
+      } else {
+        toast.success("Bạn đã hủy thao tác hoàn vé.");
+      }
     }
   };
 
