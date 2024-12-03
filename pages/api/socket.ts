@@ -223,7 +223,7 @@ export default function SocketHandler(req, res) {
               });
 
               // Schedule seat reset after timeout
-              const timeoutDuration = 60000 * 5;
+              const timeoutDuration = 60000 * 2.5;
               const timeoutTime = new Date(Date.parse(registerTime) + timeoutDuration);
 
               const job = schedule.scheduleJob(timeoutTime, async () => {
