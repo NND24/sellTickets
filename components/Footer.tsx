@@ -14,17 +14,17 @@ const Footer = (props: Props) => {
               <h3 className='text-[18px] font-[600] text-white'>About</h3>
               <ul className='space-y-4'>
                 <li>
-                  <Link href='/' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     About us
                   </Link>
                 </li>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     Products and Service
                   </Link>
                 </li>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     Ways to Watch
                   </Link>
                 </li>
@@ -35,12 +35,12 @@ const Footer = (props: Props) => {
               <h3 className='text-[18px] font-[600] text-white'>Cooperation</h3>
               <ul className='space-y-4'>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     Advertise
                   </Link>
                 </li>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     Corporate relations
                   </Link>
                 </li>
@@ -51,17 +51,17 @@ const Footer = (props: Props) => {
               <h3 className='text-[18px] font-[600] text-white'>Help and support</h3>
               <ul className='space-y-4'>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     Feedback
                   </Link>
                 </li>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     Security Response Center
                   </Link>
                 </li>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     FAQ
                   </Link>
                 </li>
@@ -72,12 +72,12 @@ const Footer = (props: Props) => {
               <h3 className='text-[18px] font-[600] text-white'>Terms of Service</h3>
               <ul className='space-y-4'>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href='' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
+                  <Link href='/home' className='text-[14px] text-gray-300 hover:text-[#e2aa11]'>
                     Terms of Service
                   </Link>
                 </li>

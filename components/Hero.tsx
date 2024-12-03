@@ -29,7 +29,7 @@ const Hero = (props: Props) => {
         >
           <SwiperSlide>
             <>
-              <Link href={`/`}>
+              <Link href={`/home`}>
                 <img
                   src='https://www.vietnamairlines.com/~/media/8E433D91E88A40B4B139B3616BD64F5C.ashx'
                   alt=''
@@ -42,7 +42,7 @@ const Hero = (props: Props) => {
           </SwiperSlide>
           <SwiperSlide>
             <>
-              <Link href={`/`}>
+              <Link href={`/home`}>
                 <img
                   src='https://www.vietnamairlines.com/~/media/79386C81E05A493684891B3A86BBD547.ashx'
                   alt=''
@@ -55,7 +55,7 @@ const Hero = (props: Props) => {
           </SwiperSlide>
           <SwiperSlide>
             <>
-              <Link href={`/`}>
+              <Link href={`/home`}>
                 <img
                   src='https://www.vietnamairlines.com/vn/vi/~/media/5BC370B28D6C475EAD2551167D09DB73.ashx'
                   alt=''
