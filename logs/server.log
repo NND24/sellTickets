@@ -1,0 +1,6 @@
+[17:49:05][INFO]: [Task scheduling] _ Schedule set for 300s
+[17:49:05][INFO]: [200] - [T2CAK8QtEGev4nFS7G4nOED0WqD2] Seat registered successfully
+[17:49:06][INFO]:  [37m[1m○[22m[39m Compiling /booking/payment/[flight_id] ...
+[17:49:09][INFO]:  [32m[1m✓[22m[39m Compiled /booking/payment/[flight_id] in 4.1s (1903 modules)
+[17:49:14][INFO]: Client connected
+[17:49:14][INFO]: User joined flight: flight_id_12345
